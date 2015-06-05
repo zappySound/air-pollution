@@ -493,4 +493,4 @@ function googlemapCtrl($scope, $compile, $stateParams, ParseDataService, CHART_P
 
 }
 
-angular.module('AirPollutionApp').controller('googlemapCtrl', googlemapCtrl);
+angular.module('AirPollutionApp').controller('googlemapCtrl', [ '$scope', '$compile', '$stateParams', 'ParseDataService', 'CHART_PRESETS', googlemapCtrl]);

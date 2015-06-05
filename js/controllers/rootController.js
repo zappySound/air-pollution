@@ -27,4 +27,4 @@ function rootCtrl($scope) {
 
 }
 
-angular.module('AirPollutionApp').controller('rootCtrl', rootCtrl);
+angular.module( 'AirPollutionApp' ).controller( 'rootCtrl', [ '$scope', rootCtrl ] );

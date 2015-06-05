@@ -118,7 +118,7 @@ angular.module('AirPollutionApp')
         return {
             restrict: 'EA',
             templateUrl: "js/views/table.html",
-            controller : controller,
+            controller : [ '$scope', 'ParseDataService', 'CHART_PRESETS', controller],
             controllerAs : 'table'
         }
     });

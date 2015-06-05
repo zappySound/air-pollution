@@ -41,6 +41,7 @@ gulp.task('combine-js', function () {
                 'vender/slider.js',
                 'vender/jquery.xdomainajax.js',
             ])
+            .pipe(uglify())
             .pipe(concat('vender.js'))
             .pipe(gulp.dest('build/js'));
 
@@ -54,6 +55,7 @@ gulp.task('combine-js', function () {
                 'js/old/**/*.js'
             ])
             .pipe(stripDebug())
+            .pipe(uglify())
             .pipe(concat('script.js'))
             .pipe(gulp.dest('build/js'))
             .pipe(reload());

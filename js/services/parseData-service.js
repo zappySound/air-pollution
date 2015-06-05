@@ -155,5 +155,5 @@ function ParseDataService($q, $http, $filter, CHART_PRESETS) {
 
 }
 
-angular.module('AirPollutionApp').service('ParseDataService', ParseDataService);
+angular.module('AirPollutionApp').service('ParseDataService', [ '$q', '$http', '$filter', 'CHART_PRESETS', ParseDataService]);
 

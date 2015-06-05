@@ -5,7 +5,7 @@
  * @desc googlemap 맵 선택시 동작된다.
  */
 
-function currentGooglemapCtrl($scope, $compile, $stateParams, $location, ParseDataService, CHART_PRESETS) {
+function currentGooglemapCtrl($scope, $compile, $stateParams, ParseDataService, CHART_PRESETS) {
 
     /**
      * variables
@@ -441,4 +441,4 @@ function currentGooglemapCtrl($scope, $compile, $stateParams, $location, ParseDa
 
 }
 
-angular.module('AirPollutionApp').controller('currentGooglemapCtrl', currentGooglemapCtrl);
+angular.module('AirPollutionApp').controller('currentGooglemapCtrl', [ '$scope', '$compile', '$stateParams', 'ParseDataService', 'CHART_PRESETS', currentGooglemapCtrl]);

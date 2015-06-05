@@ -449,4 +449,4 @@ function openstreetCtrl($scope, $stateParams, $compile, CHART_PRESETS, ParseData
 
 }
 
-angular.module('AirPollutionApp').controller('openstreetCtrl', openstreetCtrl);
+angular.module('AirPollutionApp').controller('openstreetCtrl', [ '$scope', '$stateParams', '$compile', 'CHART_PRESETS', 'ParseDataService', openstreetCtrl]);

@@ -8,7 +8,7 @@ angular
         'ui.router',
         'ui.slider'
     ])
-    .config(function($stateProvider, $urlRouterProvider){
+    .config(['$stateProvider', '$urlRouterProvider' , function($stateProvider, $urlRouterProvider){
 
         $urlRouterProvider.otherwise("/current/openstreetmap");
 
@@ -44,4 +44,4 @@ angular
                     templateUrl: 'js/views/openstreet.html',
                     controller: 'openstreetCtrl as openstreet'
                 })
-    });
+    }]);

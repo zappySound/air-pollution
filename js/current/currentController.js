@@ -102,4 +102,4 @@ function currentCtrl( $scope, $timeout, $window ) {
 
 }
 
-angular.module('AirPollutionApp').controller('currentCtrl', currentCtrl);
+angular.module('AirPollutionApp').controller('currentCtrl', [ '$scope', '$timeout', '$window', currentCtrl]);

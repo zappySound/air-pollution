@@ -194,7 +194,7 @@ function currentOpenstreetCtrl ( $scope, $compile, $stateParams, ParseDataServic
 
         // 관측소와 구경계에 대한 데이터를 얻는다.
         promise.then(function ( data ) {
-
+            console.log(data)
             // 받은 데이터의 날짜를 표시한다.
             $scope.$emit( 'setCurrentDate', data['ListAirQualityByDistrictService']['row'][0]['MSRDATE']);
 
@@ -446,4 +446,4 @@ function currentOpenstreetCtrl ( $scope, $compile, $stateParams, ParseDataServic
 
 }
 
-angular.module('AirPollutionApp').controller('currentOpenstreetCtrl', currentOpenstreetCtrl);
+angular.module('AirPollutionApp').controller('currentOpenstreetCtrl', [ '$scope', '$compile', '$stateParams', 'ParseDataService', 'CHART_PRESETS', currentOpenstreetCtrl]);

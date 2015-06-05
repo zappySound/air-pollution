@@ -6,7 +6,7 @@
  *  서울의 일별 평균온도.
  */
 
-function oldCtrl($scope, $timeout, $window, $filter, $interval, ParseDataService) {
+function oldCtrl($scope, $timeout, $window, $interval, ParseDataService) {
 
     /**
      * variables
@@ -225,4 +225,4 @@ function oldCtrl($scope, $timeout, $window, $filter, $interval, ParseDataService
 
 }
 
-angular.module('AirPollutionApp').controller('oldCtrl', oldCtrl);
+angular.module('AirPollutionApp').controller('oldCtrl', [ '$scope', '$timeout', '$window', '$interval', 'ParseDataService', oldCtrl]);
