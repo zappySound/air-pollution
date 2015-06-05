@@ -73,7 +73,6 @@ function ParseDataService($q, $http, $filter, CHART_PRESETS) {
 
     /**
      * 날씨 데이터 파싱.
-     * 크로스 도메인에 걸리므로 getParseData 를 사용하지 않는다.
      * @name service.getParseWeather
      * @param {string} polygonUrl : 외부데이터 url
      * @returns {promise} : 데이터

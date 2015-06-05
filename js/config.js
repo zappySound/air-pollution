@@ -1,6 +1,17 @@
 'use strict';
 
 /**
+ * api 키를 셋팅한다.
+ * @type {{currentSeoulDataKey: string, seoulDataKey: string}}
+ */
+window['APIKKEYS'] = {
+    /* 실시간 대기 정보 */
+    currentSeoulDataKey : '6173694361796f7535354d6a4e4a69',
+    /* 일별 대기 정보 */
+    seoulDataKey : '4150495f32303830796f756e6767756b30323132'
+}
+
+/**
  * @name CHART_PRESETS
  */
 
@@ -13,9 +24,9 @@ angular.module('AirPollutionApp')
         },
         defaultInfoMsg : '구 위에 마우스를 올려 보세요',
         /* 서울의 실시간 자치구별 대기환경정보 */
-        currentSeoulDataUrl : 'http://openAPI.seoul.go.kr:8088/6173694361796f7535354d6a4e4a69/json/ListAirQualityByDistrictService/1/100/',
+        currentSeoulDataUrl : 'http://openAPI.seoul.go.kr:8088/' + APIKKEYS.currentSeoulDataKey + '/json/ListAirQualityByDistrictService/1/100/',
         /* 서울의 일별 평균 대기오염도 */
-        seoulDataUrl : 'http://openapi.seoul.go.kr:8088/4150495f32303830796f756e6767756b30323132/json/DailyAverageAirQuality/1/100/',
+        seoulDataUrl : 'http://openapi.seoul.go.kr:8088/' + APIKKEYS.seoulDataKey + '/json/DailyAverageAirQuality/1/100/',
         /* 기상청 url */
         kmaDataUrl : 'http://www.kma.go.kr/wid/queryDFS.jsp',
         /* 날씨 좌표 */

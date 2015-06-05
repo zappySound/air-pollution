@@ -1,14 +1,12 @@
 'use strict';
 
 /**
- * @name oldCtrl
+ * @name rootCtrl
  * @desc
  *  서울시 대기 데이터 시각화.
  */
 
-function rootCtrl($scope, $document) {
-
-    // 링크 연결후 실시간 대기
+function rootCtrl($scope) {
 
     var vm = this;
 
