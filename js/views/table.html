@@ -1,0 +1,10 @@
+<div class="origin">[데이터 출처] <a href="http://data.seoul.go.kr/" target="_blank">서울 열린 데이터 광장</a>, <a href="www.kma.go.kr/" target="_blank">기상청</a></span></div>
+<div ng-repeat="item in table.airStateList" class="table_view">
+    <h2>{{item.date}} ({{item.type}})</h2>
+
+    <ul>
+        <li ng-repeat="item2 in item.values"><strong>{{item2.name}} : </strong> {{item2.value}}</li>
+    </ul>
+
+</div>
+

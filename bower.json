@@ -1,0 +1,32 @@
+{
+  "name": "air-pollution",
+  "version": "0.0.1",
+  "authors": [
+    "shin <punk2001@linkit.kr>"
+  ],
+  "description": "linkit project",
+  "keywords": [
+    "air-pollution",
+    "angularjs",
+    "googlemap",
+    "openstreetmap",
+    "data visualization"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.linkit.kr",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "leaflet": "~0.7.3",
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-ui-router": "~0.2.15"
+  }
+}

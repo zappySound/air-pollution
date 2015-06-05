@@ -1,0 +1,9 @@
+<div class="item unit">단위:{{units}}</div>
+<div class="item" ng-repeat="item in grades">
+    <i ng-style="{'background-color':unitsColor[$index]}"></i>
+    {{item}}
+    <span ng-if="!$last"> - </span>
+    <span ng-if="$last"> + </span>
+    {{grades[$index+1]}}
+</div>
+<div class="item source"><a href="http://cleanair.seoul.go.kr/inform.htm?method=cai" target="_blank">통합대기환경지수(CAI)</a></div>

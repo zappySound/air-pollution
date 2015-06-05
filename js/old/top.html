@@ -1,0 +1,23 @@
+<!-- chkMapType -->
+<div id="chkMapType" class="chk_map_type">
+    <input type="radio" ng-model="old.mapType" id="mapType1" name="mapType" value="googlemap" ng-change="old.chgMapType()"/>
+    <label for="mapType1">googlemap</label>
+    <input type="radio" ng-model="old.mapType" id="mapType2" name="mapType" value="openstreetmap" ng-change="old.chgMapType()"/>
+    <label for="mapType2">openstreetmap</label>
+</div>
+<!-- //chkMapType -->
+<!-- sliderCtrl -->
+<div id="sliderCtrl" class="slider_ctrl">
+    <span ng-click="old.play()"> > </span>
+    <span ng-click="old.stop()"> || </span>
+</div>
+<!-- //sliderCtrl -->
+<div id="control" buttons-directive ></div>
+<div id="slider-container">
+    <div ui-slider="old.slider.options" ng-model="old.sliderVal" min="0" max="365">
+    </div>
+    <span class="year-month" ng-repeat="item in old.dateButtonList" ng-style="{'left':item.left}" ng-click="old.clickSlideButton(item.value)">
+        {{item.text}}
+        <span class="bar"></span>
+    </span>
+</div>
