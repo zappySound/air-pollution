@@ -45,14 +45,14 @@ $ gulp dev
 
 ```
 ├── js                                # 화면을 구성하기위해 작성된 폴더 입니다
-│   ├── config.js                    # 각종 설정 파일
-│   ├── route.js                     # url 설정 파일
-│   ├── controllers                  # 공통 컨트롤러 폴더
-│   ├── current                      # 서울의 실시간 대기 및 날씨 관련 폴더
-│   ├── directives                   # 공통 디렉티브 폴더
-│   ├── old                          # 서울의 일별 평균 대기오염도 폴더
-│   ├── services                     # 공통 서비스 폴더
-│   ├── views                        # 공통 html 모듈 폴더
+│   ├── config.js                     # 각종 설정 파일
+│   ├── route.js                      # url 설정 파일
+│   ├── controllers                   # 공통 컨트롤러 폴더
+│   ├── current                       # 서울의 실시간 대기 및 날씨 관련 폴더
+│   ├── directives                    # 공통 디렉티브 폴더
+│   ├── old                           # 서울의 일별 평균 대기오염도 폴더
+│   ├── services                      # 공통 서비스 폴더
+│   ├── views                         # 공통 html 모듈 폴더
 ├── bower.json                        # bower 세팅
 ├── gulpfile.js                       # gulp task 정의
 ├── package.json                      # npm 셋팅
