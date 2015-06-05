@@ -18,22 +18,20 @@ $ gulp dev
 
 ##설정
 
-*/js/config.js 에서 값을 변경 할 수 있습니다.
-|   key   |    설명    |
-|---------|------------|
-|currentSeoulDataKey|실시간 대기환경 api key|
-|seoulDataKey|일별 대기환경 api key|
-|defaultMapSetting|최초 맵 좌표 센터 설정 (초기값 : 서울시)|
-|defaultInfoMsg|우측상단 정보창 메시지|
-|currentSeoulDataUrl|실시간 대기환경 api url|
-|seoulDataUrl|일별 대기환경 api url|
-|kmaDataUrl|기상청 동네예보 api url|
-|weatherDataUrl|각 자치구 좌표|
-|observatoryUrl|관측소 좌표|
-|polygonUrl|자치구 경계 좌표|
-|grades|대기별 범례|
-|units|대기별 단위 기호|
-|getColor|대기별 농도 색상|
+* /js/config.js 에서 값을 변경 할 수 있습니다.
+    * currentSeoulDataKey : 실시간 대기환경 api key
+    * seoulDataKey : 일별 대기환경 api key
+    * defaultMapSetting : 최초 맵 좌표 센터 설정 (초기값 : 서울시)
+    * defaultInfoMsg : 우측상단 정보창 메시지
+    * currentSeoulDataUrl : 실시간 대기환경 api url
+    * seoulDataUrl : 일별 대기환경 api url
+    * kmaDataUrl : 기상청 동네예보 api url
+    * weatherDataUrl : 각 자치구 좌표
+    * observatoryUrl : 관측소 좌표
+    * polygonUrl : 자치구 경계 좌표
+    * grades : 대기별 범례
+    * units : 대기별 단위 기호
+    * getColor : 대기별 농도 색상
 
 ##화면
 * 서울의 실시간 대기 및 날씨 (google map, open street map)
