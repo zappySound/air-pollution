@@ -1,5 +1,0 @@
-<span ng-repeat="item in old.buttonList">
-    <input type="radio" id="{{item.id}}" name="type" ng-model="old.checkType" ng-change="old.colorTypeChange(item.label)" ng-init="$last ? old.btnSet() : null" value="{{item.value}}">
-    <label for="{{item.id}}">{{item.label}}</label>
-</span>
-<div class="date">{{old.dateString}}</div>
