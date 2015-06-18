@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="og:title" content="링크잇 데이터 시각화 데모 - 서울의 일별 평균 대기오염도"/>
+    <meta property="og:site_name" content="서울의 일별 평균 대기오염도 - 링크잇"/>
+    <meta property="og:description" content="서울의 일별 평균 대기오염도 "/>
+    <meta property="og:type" content="website"/>
+    <meta name="keywords" content="데이터 시각화, 링크잇, geo, map" />
+    <title>서울의 일별 평균 대기오염도</title>
+    <!-- begin :: styles -->
+    <link href="vender/dark-hive/jquery-ui.css" rel="stylesheet">
+    <link href="vender/dark-hive/jquery.ui.theme.css" rel="stylesheet">
+    <link href="bower_components/leaflet/dist/leaflet.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <!-- end :: styles -->
+</head>
+<body ng-app="AirPollutionApp">
+<!-- wrapper : begin controller -->
+<div id="wrapper" ng-controller="rootCtrl as root">
+    <!-- header -->
+    <div header-directive></div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="container" ui-view>
+
+    </div>
+    <!-- //container -->
+
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="bower_components/mathjs/dist/math.js"></script>
+    <script src="vender/jquery.xdomainajax.js"></script>
+    <script src="vender/slider.js"></script>
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+
+    <script src="js/route.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/services/parseData-service.js"></script>
+
+    <script src="js/root/root-controller.js"></script>
+
+    <script src="js/directives/header-directive.js"></script>
+    <script src="js/directives/airtype-directive.js"></script>
+    <script src="js/directives/legend-directive.js"></script>
+    <script src="js/directives/average-directive.js"></script>
+    <script src="js/directives/piechart-directive.js"></script>
+    <script src="js/directives/barchart-directive.js"></script>
+    <script src="js/directives/info-directive.js"></script>
+    <script src="js/directives/map-button-directive.js"></script>
+    <script src="js/directives/date-directive.js"></script>
+    <script src="js/directives/detail-directive.js"></script>
+
+    <script src="js/current/current-controller.js"></script>
+    <script src="js/current/current-overview-directive.js"></script>
+    <script src="js/current/current-map-directive.js"></script>
+    <script src="js/current/current-googlemap-controller.js"></script>
+    <script src="js/current/current-openstreetmap-controller.js"></script>
+
+    <script src="js/old/old-controller.js"></script>
+    <script src="js/old/old-overview-directive.js"></script>
+    <script src="js/old/old-map-directive.js"></script>
+    <script src="js/old/old-openstreetmap-controller.js"></script>
+    <script src="js/old/old-googlemap-controller.js"></script>
+
+
+
+</div>
+<!-- //wrapper -->
+</body>
+</html>

@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/**
+ * Created by shin on 2015-06-11.
+ * 화면 ui 구성 파일
+ * 라리브러리 스타일 override
+ */
+
+/* fonts */
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('../fonts/NanumGothicCompact.eot');  /* IE6-8 */
+    src: local('☺'),
+    url('../fonts/NanumGothicCompact.woff') format('woff'),  /* FF3.6, IE9 */
+    url('../fonts/NanumGothicCompact.ttf') format('truetype');  /* Saf3+,Chrome,FF3.5,Opera10+ */
+}
+
+/* for html5 elements */
+html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var, b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0; padding:0; border:0; outline:0; background:transparent;}
+article, aside,details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:normal; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted;cursor:help; }
+
+/* global */
+body, html {}
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button { margin:0; padding:0; }
+body { font-family:"Nanum Gothic","돋움",dotum,Apple SD Gothic Neo, AppleGhothic; color:#000; font-size:12px; -webkit-text-size-adjust:none; }
+table, table td, input, select, textarea{ font-size:12px; font-family:"Nanum Gothic","돋움",dotum,Apple SD Gothic Neo, AppleGhothic; }
+ul, ol, li { list-style:none; }
+li { vertical-align:top; }
+div {box-sizing: border-box;}
+fieldset,form, button { font-family:"Nanum Gothic","돋움",dotum,Apple SD Gothic Neo, AppleGhothic; }
+img { border:0; }
+hr, legend { display:none; }
+em, address { font-style:normal; }
+table { border-collapse:collapse; }
+textarea  { overflow:auto;  font-size:12px; color:#000; border:1px solid #d2d2d2; resize:none; font-family:"Nanum Gothic","돋움",dotum,Apple SD Gothic Neo, AppleGhothic; }
+a { color:#0000cc; text-decoration:none;}
+a:hover, a:active, a:focus { text-decoration:underline; }
+
+/* begin style setting */
+
+body { background: #191919; }
+#wrapper { position: relative; }
+header { position: relative; height: 100px; z-index: 1001;}
+header h1 { text-align: center; color: #fff; font-size: 34px; font-weight: normal; line-height: 100px; }
+header h1 span { display: inline-block; vertical-align: middle; margin-top: -10px; font-size: 18px; cursor: pointer;}
+header .nav {position: absolute; top: 70px; padding: 0; margin:0 0 0 0px; width: 100%; z-index: 10; background: #000; opacity: .7;}
+header .nav li {list-style: none; text-align: center; color: #fff; font-size: 20px; font-weight: bold; padding: 0 10px; line-height: 30px; cursor: pointer;}
+header .nav li a:hover {color: #46a546}
+header .nav li a {font-size: 20px; color: #fff; text-decoration: none;}
+
+#container {position: relative;}
+
+.gray_box { background: #313131; overflow: hidden; padding-top: 10px; border: 1px solid #000; }
+.gray_box h2 { padding: 15px 0 15px 20px; color: #646464; font-size: 16px; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6); }
+.gray_box .info_con { position: relative; padding: 0 20px 10px 20px; }
+
+.overview { position: relative;}
+
+.state_count {padding: 0px 0 10px 0; font-size: 60px; color: #fff; font-weight: bold;}
+.state_count span {color: #646464; font-size: 20px;}
+
+.legend_wrapper {position: relative; padding-bottom: 5px; overflow: hidden;}
+.legend_wrapper .item {float: left; position: relative; overflow: hidden; height: 20px; line-height: 22px; width: 83px; text-align: center; color: #000; font-size: 11px; }
+
+.pie_wrapper {position: relative;}
+.pie_chart_container {width: 200px; height: 170px; margin: -20px 0 0 -10px;}
+.pie_chart_container .highcharts-background{display:none;}
+.grid_pie {position: absolute; top: 49px; right: 20px; color: #000; font-family: '돋움',Dotum; font-size: 11px;}
+.grid_pie table {width: 100%;}
+.grid_pie th,
+.grid_pie td {border-bottom: 3px solid #313131; font-size: 11px; font-family: '돋움',Dotum;}
+.grid_pie th {padding: 0 3px; white-space: nowrap;}
+.grid_pie td {line-height: 16px; margin-bottom: 3px; padding: 3px; vertical-align: middle; border-left: 3px solid #313131}
+
+.barchart_wrapper {position: absolute; bottom: 0; right: 0px; width:60%; height: 350px;background: #313131; overflow: hidden; padding-top: 10px; border: 1px solid #000}
+.bar_chart_container {height: 270px; max-width: 1000px; margin: -30px auto 0 auto;}
+
+.chk_map_type {position: absolute; top: 20px; left: 20px; z-index: 100; display: none;}
+
+.info { padding: 6px 8px; font-size: 14px; width: 200px; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; }
+.info h4 { margin: 0 0 5px; color: #777; font-size: 14px; }
+.info span { font-size: 14px; }
+.guide.gmap { position: absolute; bottom:80px; left: 10px; z-index: 100; }
+
+.detail h3 {color: #fff; margin: 0; padding: 0 0 0 10px; height: 26px; line-height: 26px; font-size: 13px; font-weight: normal; background: #000;}
+.detail ul {box-sizing: border-box; overflow: hidden; margin: 0; padding: 10px 0 10px 10px;}
+.detail li {float: left; list-style: none; width: 125px; line-height: 26px; color: #ccc; font-family: dotum,'돋움' !important; font-size: 11px;}
+.detail li strong {font-family: dotum,'돋움' !important; color: #ccc;}
+
+.date_wrapper {position: relative;}
+.slider_container {position: relative; margin: 0 20px 10px 20px; padding-bottom: 17px;}
+.slider_container .year-month { display: inline-block; position: absolute; margin-left: -25px; bottom: 1px; padding-top: 13px; font-size: 12px; color: #666; width: 50px; cursor: pointer; }
+.slider_container .year-month .bar { position: absolute; width: 1px; height: 10px; top: 0; left: 24px; background-color: #777; z-index: 100; }
+#slider { width: 100%; }
+.old .slider_container {margin-right: 80px;}
+
+.slider_ctrl {position: absolute; top: -3px; right: 20px; z-index: 10}
+.slider_ctrl span {display: inline-block; padding: 5px; line-height: 5px; vertical-align: middle; cursor: pointer; background: #333; border: 1px solid #666; color: #fff; font-size: 11px; font-weight: bold;}
+
+.css_icon {display: block; width: 4px; height: 4px; border: 2px solid #fff; border-radius: 16px; box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5); z-index: 100;}
+.css_icon.gmap {width: 12px; height: 12px;}
+.css_icon.active {border-color: #ff0000 !important;}
+
+/* end style setting */
+
+/* plugin override */
+#control { position: relative; margin-bottom: 10px; margin-right: 0; }
+#control:after { content: ''; display: block; clear: both; }
+#control .date { position: absolute; top: 40px; right: 0; font-weight: bold; font-size: 16px; }
+#control .date2 { top: 10px; }
+
+.air_type { padding-top: 5px; display: none; }
+.air_type label { float: left; border-radius: 0; border: none; color: #ccc; text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def; margin-right: 0 !important; }
+.air_type label.ui-state-active { background: #313131 !important; -moz-box-shadow:inset 0 0 10px #000000;  -webkit-box-shadow: inset 0 0 10px #000000;  box-shadow: inset 0 0 10px #000000; }
+.air_type label.ui-state-hover { background: #313131 !important; -moz-box-shadow:inset 0 0 10px #000000;  -webkit-box-shadow: inset 0 0 10px #000000;  box-shadow: inset 0 0 10px #000000; }
+.air_type span { margin: 0; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6) !important; color: #999; }
+.air_type .ui-state-active span { color: #fff; font-weight: normal !important; }
+.ui-buttonset { display: block; }
+
+
+/**
+    RWD start
+*/
+
+/* wide */
+@media (min-width: 1181px) {
+    .overview { position: relative; width: 550px; height: 563px; margin-left: 20px;}
+    .overview.old {height: 600px;}
+    .grid_pie {width: 330px;}
+    .right_container {position: absolute; top: 0; right: 20px; left: 590px; height: 560px;}
+    .map_container {position: absolute; top: 0; left: 0; right: 0; height: 560px; border: 1px solid #000;}
+    #map { position: relative; width: 100%; height: 560px; }
+    .detail {width:550px; margin: 20px 0 0 20px;}
+    .detail_wrapper {height: 229px; overflow-y: auto; margin: 10px;}
+    .barchart { position: absolute; bottom: 0; right: 20px; left: 590px; height: 311px; }
+
+    .old .right_container,
+    .old .map_container,
+    .old #map {height: 596px;}
+}
+
+/* vertical */
+@media (min-width: 881px) and (max-width: 1180px) {
+    .overview { position: relative; margin: 0 30px; padding-right: 500px;}
+    .pie_wrapper {position: absolute; top: 63px; bottom:20px;  right: 20px; width: 500px; padding-bottom: 30px; background: #222;}
+    .grid_pie {width: 280px; right: 10px;}
+    .slider_ctrl {right: 30px;}
+    .right_container { position: relative; margin: 30px 30px 0 30px;}
+    .map_container {border: 1px solid #000; height: 560px;}
+    #map { position: relative; width: 100%; height: 560px;}
+    .detail {margin: 30px 30px 0 30px;}
+    .detail_wrapper {margin: 10px;}
+    .barchart {margin: 30px 30px 0 30px;}
+
+    .old .right_container,
+    .old .map_container,
+    .old #map {height: 590px;}
+}
+
+/* vertical */
+@media (min-width: 600px) and (max-width: 880px) {
+    header h1 {font-size: 20px;}
+    .overview { position: relative; margin: 0 30px;}
+    .pie_wrapper {width: 550px; padding-bottom: 30px;}
+    .grid_pie {width: 330px;}
+    .right_container { position: relative; margin: 30px 30px 0 30px;}
+    .map_container {border: 1px solid #000; height: 560px;}
+    #map { position: relative; width: 100%; height: 560px;}
+    .detail {margin: 30px 30px 0 30px;}
+    .detail_wrapper {margin: 10px;}
+    .barchart {margin: 30px 30px 0 30px;}
+
+    .old .right_container,
+    .old .map_container,
+    .old #map {height: 590px;}
+}
+
+/* vertical */
+@media (max-width: 600px) {
+    header h1 {font-size: 20px;}
+    .overview { position: relative; margin: 0 30px;}
+    .pie_wrapper {padding-bottom: 30px;}
+    .grid_pie {position: relative; top: 0; left: 0; margin: 0 20px;}
+    .right_container { position: relative; margin: 30px 30px 0 30px;}
+    .map_container {border: 1px solid #000; height: 560px;}
+    #map { position: relative; width: 100%; height: 560px;}
+    .detail {margin: 30px 30px 0 30px;}
+    .detail_wrapper {margin: 10px;}
+    .barchart {margin: 30px 30px 0 30px;}
+
+    .old .right_container,
+    .old .map_container,
+    .old #map {height: 590px;}
+}

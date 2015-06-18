@@ -25,5 +25,8 @@ bower_components
 # Build files
 /build
 
+# Backup files
+/back
+
 #webstorm
 .idea

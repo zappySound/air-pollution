@@ -1,0 +1,13 @@
+<div class="detail gray_box">
+    <h2>Detail</h2>
+    <div class="detail_wrapper">
+        <div ng-repeat="item in detail.airStateList" class="table_view">
+            <h3>{{item.title}}</h3>
+
+            <ul>
+                <li ng-repeat="item2 in item.values"><strong>{{item2.name}} : </strong> {{item2.value}}</li>
+            </ul>
+
+        </div>
+    </div>
+</div>

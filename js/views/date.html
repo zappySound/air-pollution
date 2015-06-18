@@ -1,0 +1,14 @@
+<!-- sliderCtrl -->
+<div id="sliderCtrl" class="slider_ctrl">
+    <span ng-click="date.play()"> > </span>
+    <span ng-click="date.stop()"> || </span>
+</div>
+<!-- //sliderCtrl -->
+<div id="sliderContainer" class="slider_container">
+    <div ui-slider="date.slider.options" ng-model="date.settings.sliderVal" min="0" max="365">
+    </div>
+    <span class="year-month" ng-repeat="item in date.dateButtonList" ng-style="{'left':item.left}" ng-click="date.clickSlideButton(item.value)">
+        {{item.text}}
+        <span class="bar"></span>
+    </span>
+</div>

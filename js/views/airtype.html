@@ -1,0 +1,8 @@
+<div class="info_con">
+    <div id="control" class="air_type">
+        <span ng-repeat="item in ngModel.buttonList">
+            <input type="radio" id="{{item.id}}" name="type" ng-model="ngModel.checkType" ng-change="ngModel.changeAirType(item.label)" ng-init="$last ? airType.btnSet() : null" ng-value="item.value">
+            <label for="{{item.id}}">{{item.label}}</label>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<h2>단계별 포함되는 관측소 현황</h2>
+<div class="grid_pie">
+    <table>
+        <tr ng-repeat="item in pie.chartData[2]" ng-style="{'background':item.color}">
+            <th>{{item.legend}}</th>
+            <td>{{item.name}}</td>
+        </tr>
+    </table>
+</div>
+<div id="piechartContainer" class="pie_chart_container"></div>

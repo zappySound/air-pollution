@@ -1,0 +1,9 @@
+<header ng-cloak>
+    <h1>
+        {{root.h1Title}}
+        <span ng-click="header.navButtonClick()"> ( {{header.navButtonMSg}} )</span>
+    </h1>
+    <ul class="nav" ng-show="header.navShow">
+        <li ng-repeat="menu in header.navList" ng-click="header.navClick(menu.label)"><a ui-sref="{{menu.link}}">{{menu.label}}</a></li>
+    </ul>
+</header>
