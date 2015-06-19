@@ -54,6 +54,8 @@ header .nav {position: absolute; top: 70px; padding: 0; margin:0 0 0 0px; width:
 header .nav li {list-style: none; text-align: center; color: #fff; font-size: 20px; font-weight: bold; padding: 0 10px; line-height: 30px; cursor: pointer;}
 header .nav li a:hover {color: #46a546}
 header .nav li a {font-size: 20px; color: #fff; text-decoration: none;}
+.origin {position: absolute; bottom:10px; right: 20px; color: #fff;}
+.origin a {color: #fff;}
 
 #container {position: relative;}
 

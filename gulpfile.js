@@ -39,11 +39,11 @@ gulp.task('combine-js', function () {
                 'bower_components/angular-ui-router/release/angular-ui-router.js',
                 'bower_components/leaflet/dist/leaflet.js',
                 'bower_components/mathjs/dist/math.js',
-                'vender/slider.js',
-                'vender/jquery.xdomainajax.js'
+                'vendor/slider.js',
+                'vendor/jquery.xdomainajax.js'
             ])
             //.pipe(uglify())
-            .pipe(concat('vender.js'))
+            .pipe(concat('vendor.js'))
             .pipe(gulp.dest('build/js'));
 
     gulp.src([
@@ -51,16 +51,17 @@ gulp.task('combine-js', function () {
                 'js/config.js',
                 'js/root/**/*.js',
                 'js/controllers/**/*.js',
-                'js/services/**/*.js',
                 'js/directives/**/*.js',
+                'js/services/**/*.js',
                 'js/current/**/*.js',
                 'js/old/**/*.js'
+
             ])
-            //.pipe(stripDebug())
-            //.pipe(uglify())
+            .pipe(stripDebug())
+            .pipe(uglify())
             .pipe(concat('script.js'))
             .pipe(gulp.dest('build/js'))
-            //.pipe(reload());
+            .pipe(reload());
 
 });
 
@@ -70,14 +71,14 @@ gulp.task('compile-sass', function () {
     gulp.src('styles/**/*.scss')
             .pipe(sass())
             .pipe(gulp.dest('build/css'))
-            //.pipe(reload());
+            .pipe(reload());
 
     gulp.src([
                 'bower_components/leaflet/**/*.css',
-                'vender/**/*.css'
+                'vendor/**/*.css'
             ])
-            .pipe(concat('vender.css'))
-            .pipe(gulp.dest('build/css/vender/'));
+            .pipe(concat('vendor.css'))
+            .pipe(gulp.dest('build/css/vendor/'));
 
 });
 
@@ -87,17 +88,17 @@ gulp.task('move-files', function () {
 
     gulp.src('index.html')
         .pipe(gulp.dest('build/'))
-        //.pipe(reload());
+        .pipe(reload());
 
     gulp.src('js/**/*.html')
         .pipe(gulp.dest('build/js/'))
-        //.pipe(reload());
+        .pipe(reload());
 
     gulp.src('img/**/*')
         .pipe(gulp.dest('build/img'));
 
-    gulp.src('vender/dark-hive/images/**/*')
-        .pipe(gulp.dest('build/css/vender/images/'));
+    gulp.src('vendor/dark-hive/images/**/*')
+        .pipe(gulp.dest('build/css/vendor/images/'));
 
     gulp.src('fonts/**/*')
         .pipe(gulp.dest('build/fonts/'));

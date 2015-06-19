@@ -10,14 +10,8 @@
 angular.module('AirPollutionApp')
     .directive('mapButtonDirective', function() {
 
-        function controller ( $scope ) {
-
-        }
-
         return {
             restrict: 'EA',
-            templateUrl: "js/views/mapButton.html",
-            controller : controller,
-            controllerAs : 'mapButton'
+            templateUrl: "js/views/mapButton.html"
         }
     });
