@@ -8,7 +8,7 @@
  *  실시간 대기 환경 컨트롤러
  */
 
-function currentCtrl( $scope, $window, $stateParams, CHART_PRESETS, ParseDataService ) {
+function currentCtrl( $scope, $window, $stateParams, $state, CHART_PRESETS, ParseDataService ) {
 
     /**
      * variables
@@ -51,7 +51,7 @@ function currentCtrl( $scope, $window, $stateParams, CHART_PRESETS, ParseDataSer
      *  맵 종류를 선택 한다..
      */
     vm.chgMapType = function(){
-        $window.location.href='/#/current/' + vm.mapType;
+        $state.go('current.' + vm.mapType);
     }
 
 
@@ -319,4 +319,4 @@ function currentCtrl( $scope, $window, $stateParams, CHART_PRESETS, ParseDataSer
 
 }
 
-angular.module( 'AirPollutionApp' ).controller( 'currentCtrl', [ '$scope', '$window', '$stateParams', 'CHART_PRESETS', 'ParseDataService', currentCtrl ] );
+angular.module( 'AirPollutionApp' ).controller( 'currentCtrl', [ '$scope', '$window', '$stateParams', '$state', 'CHART_PRESETS', 'ParseDataService', currentCtrl ] );

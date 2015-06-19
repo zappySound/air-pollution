@@ -79,7 +79,7 @@ angular.module('AirPollutionApp')
                     if ( val == '점검중' ) {
                         temData[item] = [vm.settings.seoulData[item][nameLabel],0];
                     } else {
-                        temData[item] = [vm.settings.seoulData[item][nameLabel],vm.settings.seoulData[item][vm.settings.checkType]];
+                        temData[item] = [vm.settings.seoulData[item][nameLabel],math.eval(vm.settings.seoulData[item][vm.settings.checkType])];
                     }
 
                 }

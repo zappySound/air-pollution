@@ -8,7 +8,7 @@
  *  일별 평균 대기 오염도
  */
 
-function oldCtrl( $scope, $window, CHART_PRESETS, ParseDataService ) {
+function oldCtrl( $scope, $window, $state, CHART_PRESETS, ParseDataService ) {
 
     /**
      * variables
@@ -55,7 +55,7 @@ function oldCtrl( $scope, $window, CHART_PRESETS, ParseDataService ) {
      *  맵 종류를 선택 한다.
      */
     vm.chgMapType = function(){
-        $window.location.href='/#/old/' + vm.mapType;
+        $state.go('old.' + vm.mapType);
     }
 
     /**
@@ -258,4 +258,4 @@ function oldCtrl( $scope, $window, CHART_PRESETS, ParseDataService ) {
 
 }
 
-angular.module( 'AirPollutionApp' ).controller( 'oldCtrl', [ '$scope', '$window', 'CHART_PRESETS', 'ParseDataService', oldCtrl ] );
+angular.module( 'AirPollutionApp' ).controller( 'oldCtrl', [ '$scope', '$window', '$state', 'CHART_PRESETS', 'ParseDataService', oldCtrl ] );
