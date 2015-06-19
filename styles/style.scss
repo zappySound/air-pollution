@@ -43,6 +43,8 @@ textarea  { overflow:auto;  font-size:12px; color:#000; border:1px solid #d2d2d2
 a { color:#0000cc; text-decoration:none;}
 a:hover, a:active, a:focus { text-decoration:underline; }
 
+.forkme {display: block; position: absolute; top: 0; left: 0; z-index: 10000;}
+
 /* begin style setting */
 
 body { background: #191919; }
@@ -200,4 +202,6 @@ header .nav li a {font-size: 20px; color: #fff; text-decoration: none;}
     .old .right_container,
     .old .map_container,
     .old #map {height: 590px;}
+    .forkme {width: 100px;}
+    .forkme img {width: 100%;}
 }
