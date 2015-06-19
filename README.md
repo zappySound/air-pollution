@@ -1,3 +1,5 @@
+![Alt Text](https://github.com/{user}/{repo}/img/image.gif)
+
 ##air-pollution
 
 이 데모는 [서울 열린 데이터 광장](http://data.seoul.go.kr/) 과 [기상청](http://www.kma.go.kr/) 에서 제공하는 Open API 의 데이터를 사용하고,
@@ -6,6 +8,7 @@ GOOGLE Map 과 Open Street Map (with leaflet, vworld)이 제공하는 지도를 
 ##제작자
 데이터 시각화 및 frontend 전문 개발 회사인 [링크잇](http://www.linkit.kr/) 에서 데모용으로 작업 되었으며,
 수정 및 재배포, 상업적 이용등에 자유롭게 사용 하실 수 있습니다.
+(챠트개발에 사용된 HIGHCHART는 이 서비스와는 별개로 자체적인 라이센스를 가지고 있으므로 사용시 반드시 라이센스를 확인 후 사용해주시기 바랍니다.)
 (외부 데이터 인증키의 경우 현재 작성된 상태로 사용하셔도 무방 하지만 가급적 새로 발급 받아 사용 하시는것을 권장 합니다.)
 
 ##빌드
