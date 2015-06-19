@@ -1,4 +1,4 @@
-![Alt Text](https://github.com/zappySound/air-pollution/master/img/air-pollution.jpeg)
+![Alt Text](https://raw.githubusercontent.com/zappySound/air-pollution/master/img/air-pollution.jpeg)
 
 ##air-pollution
 
