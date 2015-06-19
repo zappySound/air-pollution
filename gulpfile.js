@@ -57,8 +57,8 @@ gulp.task('combine-js', function () {
                 'js/old/**/*.js'
 
             ])
-            //.pipe(stripDebug())
-            //.pipe(uglify())
+            .pipe(stripDebug())
+            .pipe(uglify())
             .pipe(concat('script.js'))
             .pipe(gulp.dest('build/js'))
             .pipe(reload());
