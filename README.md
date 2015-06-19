@@ -1,4 +1,4 @@
-![Alt Text](https://github.com/{user}/{repo}/img/image.gif)
+![Alt Text](https://github.com/zappySound/air-pollution/img/image.gif)
 
 ##air-pollution
 
