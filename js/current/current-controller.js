@@ -70,6 +70,7 @@ function currentCtrl( $scope, $window, $stateParams, $state, CHART_PRESETS, Pars
 
         var promise;
 
+
         // 서울시 데이터 를 얻는다.
         promise = ParseDataService.getParseData( CHART_PRESETS.currentSeoulDataUrl );
 

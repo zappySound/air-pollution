@@ -39,11 +39,11 @@ gulp.task('combine-js', function () {
                 'bower_components/angular-ui-router/release/angular-ui-router.js',
                 'bower_components/leaflet/dist/leaflet.js',
                 'bower_components/mathjs/dist/math.js',
-                'vendor/slider.js',
-                'vendor/jquery.xdomainajax.js'
+                'vender/slider.js',
+                'vender/jquery.xdomainajax.js'
             ])
             //.pipe(uglify())
-            .pipe(concat('vendor.js'))
+            .pipe(concat('vender.js'))
             .pipe(gulp.dest('build/js'));
 
     gulp.src([
@@ -75,10 +75,10 @@ gulp.task('compile-sass', function () {
 
     gulp.src([
                 'bower_components/leaflet/**/*.css',
-                'vendor/**/*.css'
+                'vender/**/*.css'
             ])
-            .pipe(concat('vendor.css'))
-            .pipe(gulp.dest('build/css/vendor/'));
+            .pipe(concat('vender.css'))
+            .pipe(gulp.dest('build/css/vender/'));
 
 });
 
@@ -97,8 +97,8 @@ gulp.task('move-files', function () {
     gulp.src('img/**/*')
         .pipe(gulp.dest('build/img'));
 
-    gulp.src('vendor/dark-hive/images/**/*')
-        .pipe(gulp.dest('build/css/vendor/images/'));
+    gulp.src('vender/dark-hive/images/**/*')
+        .pipe(gulp.dest('build/css/vender/images/'));
 
     gulp.src('fonts/**/*')
         .pipe(gulp.dest('build/fonts/'));
