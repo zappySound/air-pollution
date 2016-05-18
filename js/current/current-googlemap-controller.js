@@ -156,7 +156,7 @@ function currentGooglemapCtrl($scope, $compile, $stateParams, CHART_PRESETS) {
         // 구 색상 표시
         function style ( feature ) {
             return {
-                fillColor: CHART_PRESETS.getColor[ vm.settings.checkType ]( feature.A.values[ vm.settings.checkType ] ),
+                fillColor: CHART_PRESETS.getColor[ vm.settings.checkType ]( feature.H.values[ vm.settings.checkType ] ),
                 strokeWeight: 2,
                 strokeOpacity: 1,
                 strokeColor: 'white',
@@ -176,7 +176,7 @@ function currentGooglemapCtrl($scope, $compile, $stateParams, CHART_PRESETS) {
                 zIndex:10
             });
 
-            updateGuide( e, layer.A.values );
+            updateGuide( e, layer.H.values );
 
         }
 
@@ -206,8 +206,8 @@ function currentGooglemapCtrl($scope, $compile, $stateParams, CHART_PRESETS) {
             zoomToFeature = function ( e ) {
 
                 var bounds = new google.maps.LatLngBounds();
-                var northEast = new google.maps.LatLng( e.feature.A.bounds[0][0], e.feature.A.bounds[0][1] );
-                var southWest = new google.maps.LatLng( e.feature.A.bounds[1][0], e.feature.A.bounds[1][1] );
+                var northEast = new google.maps.LatLng( e.feature.H.bounds[0][0], e.feature.H.bounds[0][1] );
+                var southWest = new google.maps.LatLng( e.feature.H.bounds[1][0], e.feature.H.bounds[1][1] );
 
                 bounds.extend( northEast );
                 bounds.extend( southWest );
@@ -220,8 +220,8 @@ function currentGooglemapCtrl($scope, $compile, $stateParams, CHART_PRESETS) {
             // 대기 수치만 업데이트 한다.
             vm.map.data.forEach ( function ( feature ) {
                 for ( var value in vm.settings.areaData.features ) {
-                    if ( feature.A.name == vm.settings.areaData.features[ value ].properties.name ) {
-                        feature.A[ 'values' ] = vm.settings.areaData.features[value].properties[ 'values' ];
+                    if ( feature.H.name == vm.settings.areaData.features[ value ].properties.name ) {
+                        feature.H[ 'values' ] = vm.settings.areaData.features[value].properties[ 'values' ];
                     }
                 }
             });

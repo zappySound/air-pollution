@@ -9,7 +9,6 @@ var express = require('express');
 
 var server;
 
-// 서버를 띄운다.
 gulp.task('server', function () {
     server = express();
     server.use(express.static('build'));
@@ -19,17 +18,15 @@ gulp.task('server', function () {
     });
 });
 
-// 브라우져 새로고침 한다.
 function reload() {
     if (server) {
         return browserSync.reload({
             stream: true
         });
     }
-    return gutil.noop(); // 아무 것도 하지 않는 스트림을 리턴한다.
+    return gutil.noop();
 }
 
-// 자바스크립트 파일을 하나로 합치고 압축한다.
 gulp.task('combine-js', function () {
 
     gulp.src([
@@ -65,7 +62,6 @@ gulp.task('combine-js', function () {
 
 });
 
-// sass 파일을 css 로 컴파일한다.
 gulp.task('compile-sass', function () {
 
     gulp.src('styles/**/*.scss')
@@ -82,8 +78,6 @@ gulp.task('compile-sass', function () {
 
 });
 
-
-// 수정없이 파일만 이동한다.
 gulp.task('move-files', function () {
 
     gulp.src('index.html')
@@ -107,7 +101,7 @@ gulp.task('move-files', function () {
         .pipe(gulp.dest('build/demo-data/'));
 });
 
-// 파일 변경 감지
+
 gulp.task('watch', function () {
     gulp.watch('js/**/*.js', ['combine-js']);
     gulp.watch('styles/**/*.scss', ['compile-sass']);
@@ -115,7 +109,6 @@ gulp.task('watch', function () {
     gulp.watch('build/**');
 });
 
-//기본 task 설정
 gulp.task('dev', [
     'server',
     'move-files',
